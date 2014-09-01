@@ -25,9 +25,10 @@ import java.net.URL;
 import org.dom4j.DocumentException;
 import org.jaxen.JaxenException;
 import org.junit.Test;
-import org.nuxeo.ecm.jsf2.migration.impl.MigrationServiceImpl;
 import org.nuxeo.ecm.jsf2.migration.report.EnumTypeMigration;
 import org.nuxeo.ecm.jsf2.migration.report.FileReport;
+import org.nuxeo.ecm.jsf2.migration.service.api.MigrationService;
+import org.nuxeo.ecm.jsf2.migration.service.impl.MigrationServiceImpl;
 
 /**
  * Test case of the migration

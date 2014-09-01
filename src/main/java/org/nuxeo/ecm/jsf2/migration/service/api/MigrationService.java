@@ -14,7 +14,7 @@
  * Contributors:
  *     <a href="mailto:glefevre@nuxeo.com">Gildas</a>
  */
-package org.nuxeo.ecm.jsf2.migration.api;
+package org.nuxeo.ecm.jsf2.migration.service.api;
 
 import java.io.File;
 import java.io.IOException;

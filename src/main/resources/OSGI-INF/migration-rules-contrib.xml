@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.jsf2.migration" version="1.0">
+  
+  <extension target="org.nuxeo.ecm.jsf2.migration.service" point="rules">
+    <rule name="a4jform">
+      <xpath>//a4j:form</xpath>
+      <automaticMigration>false</automaticMigration>
+      <severity>info</severity>
+      <parser>org.nuxeo.ecm.jsf2.migration.analyzer.GenericParser</parser>
+      <keyMessage>tag.a4j.ajax.rule1.message</keyMessage>      
+    </rule> 
+  </extension>
+  
+  <extension target="org.nuxeo.ecm.jsf2.migration.service" point="prefixes">
+    <prefix name="c" namespace="http://java.sun.com/jstl/core" />
+    <prefix name="h" namespace="http://java.sun.com/jsf/html" />
+    <prefix name="f" namespace="http://java.sun.com/jsf/core" />
+    <prefix name="a4j" namespace="http://richfaces.org/a4j" />
+    <prefix name="rich" namespace="http://richfaces.org/rich" />
+    <prefix name="a4f" namespace="https://ajax4jsf.dev.java.net/ajax" />
+    <prefix name="nxl" namespace="http://nuxeo.org/nxforms/layout" />
+    <prefix name="nxthemes" namespace="http://nuxeo.org/nxthemes" />
+    <prefix name="nxu" namespace="http://nuxeo.org/nxweb/util" />
+    <prefix name="nxdir" namespace="http://nuxeo.org/nxdirectory" />
+    <prefix name="nxh" namespace="http://nuxeo.org/nxweb/html" />
+  </extension>
+  
+</component>

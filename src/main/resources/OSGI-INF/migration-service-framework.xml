@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.jsf2.migration.service.impl.MigrationServiceImpl">
+  <documentation>
+    Module to help the migration of a project to JSF2.
+  </documentation>
+
+  <implementation class="org.nuxeo.ecm.jsf2.migration.service.impl.MigrationServiceImpl"/>
+
+  <service>
+    <provide interface="org.nuxeo.ecm.jsf2.migration.service.api.MigrationService"/>
+  </service>
+
+  <extension-point name="prefixes">
+    <documentation>
+      This extension can be used to register prefixes
+    </documentation>
+    <object class="org.nuxeo.ecm.jsf2.migration.service.PrefixDescriptor"/>
+  </extension-point>
+
+  <extension-point name="rules">
+    <documentation>
+      This extension can be used to configure migration rules
+    </documentation>
+    <object class="org.nuxeo.ecm.jsf2.migration.service.RuleDescriptor"/>
+  </extension-point>
+
+</component>

@@ -30,14 +30,14 @@ public class FileReport {
 
     private File attachedFile;
 
-    private Map<EnumTypeMigration, Integer> listMigration;
+    private Map<String, Integer> listMigration;
 
-    private Map<EnumTypeMigration, List<String>> listParams;
+    private Map<String, List<String>> listParams;
 
     public FileReport(File attachedFile) {
         this.attachedFile = attachedFile;
-        listMigration = new HashMap<EnumTypeMigration, Integer>();
-        listParams = new HashMap<EnumTypeMigration, List<String>>();
+        listMigration = new HashMap<String, Integer>();
+        listParams = new HashMap<String, List<String>>();
     }
 
     public File getAttachedFile() {
@@ -49,11 +49,11 @@ public class FileReport {
         this.attachedFile = attachedFile;
     }
 
-    public Map<EnumTypeMigration, Integer> getListMigration() {
+    public Map<String, Integer> getListMigration() {
         return listMigration;
     }
 
-    public Map<EnumTypeMigration, List<String>> getListParams() {
+    public Map<String, List<String>> getListParams() {
         return listParams;
     }
 }

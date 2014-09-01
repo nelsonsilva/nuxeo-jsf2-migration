@@ -31,19 +31,27 @@ public enum EnumTypeMigration {
 
     A4J_FORM_RULE_1("//a4j:form","a4j","http://richfaces.org/a4j","tag.a4j.ajax.rule1.message", Severity.WARNING),
     A4J_FORM_RULE_2("//a4j:form","a4j","https://ajax4jsf.dev.java.net/ajax","tag.a4j.ajax.rule1.message", Severity.WARNING),
+    A4J_RERENDER_RULE("//@reRender", "a4j","https://ajax4jsf.dev.java.net/ajax","tag.a4j.rerender.rule.message", Severity.WARNING),
+    A4J_ACTIONPARAM_RULE1("//a4j:actionparam", "a4j", "https://ajax4jsf.dev.java.net/ajax","tag.a4j.actionParam.rule.message",Severity.INFO),
+    A4J_ACTIONPARAM_RULE2("//a4j:actionparam", "a4j", "http://richfaces.org/a4j","tag.a4j.actionParam.rule.message",Severity.INFO),
     NAMESPACE_RULE_1(null, null, null, "tag.namespace.rule1.message", Severity.ERROR),
-    NAMESPACE_RULE_2("a4j", "a4j", "https://ajax4jsf.dev.java.net/ajax", "tag.namespace.rule2.message", Severity.INFO);
+    NAMESPACE_RULE_2(null, "a4j", "https://ajax4jsf.dev.java.net/ajax", "tag.namespace.rule2.message", Severity.INFO);
 
     private enum Severity {INFO, WARNING, ERROR};
 
+    // XPath used to get the elements to check
     private String xpath;
 
+    // The prefix of the element
     private String prefix;
 
+    // The namespace used for prefix element
     private String namespace;
 
+    // The key of the message stored in the properties file
     private String keyMessage;
 
+    // The severity of the message
     private Severity severityMessage;
 
     private EnumTypeMigration(
@@ -80,7 +88,7 @@ public enum EnumTypeMigration {
     }
 
     /**
-     * Get all the type of migration with a xpath defined.
+     * Get all the type of migration with an element defined.
      *
      * @return
      */
@@ -88,7 +96,7 @@ public enum EnumTypeMigration {
         List<EnumTypeMigration> result = new ArrayList<EnumTypeMigration>();
 
         for (EnumTypeMigration type : values()) {
-            if (!StringUtils.isEmpty(type.xpath)) {
+            if (!StringUtils.isEmpty(type.xpath) || !StringUtils.isEmpty(type.prefix)) {
                 result.add(type);
             }
         }

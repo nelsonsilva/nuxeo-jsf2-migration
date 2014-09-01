@@ -4,3 +4,5 @@ Bundle-Name: Nuxeo JSF2 Migration
 Bundle-SymbolicName: org.nuxeo.ecm.jsf2.migration;singleton:=true
 Bundle-Vendor: Nuxeo
 Bundle-Version: 1.0.0
+Nuxeo-Component: OSGI-INF/migration-rules-contrib.xml,
+                 OSGI-INF/migration-service-framework.xml

@@ -20,8 +20,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import org.nuxeo.ecm.jsf2.migration.api.MigrationService;
-import org.nuxeo.ecm.jsf2.migration.impl.MigrationServiceImpl;
+import org.nuxeo.ecm.jsf2.migration.service.api.MigrationService;
+import org.nuxeo.ecm.jsf2.migration.service.impl.MigrationServiceImpl;
 
 /**
  * Main class for the tool to help the migration to JSF 2.
